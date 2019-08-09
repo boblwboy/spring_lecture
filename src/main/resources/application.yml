@@ -1,7 +1,7 @@
 spring:
   application:
     name: mytest
-  mandatory-file-encoding: UTF-8
+  #mandatory-file-encoding: UTF-8
   http:
     encoding:
       enabled: true
