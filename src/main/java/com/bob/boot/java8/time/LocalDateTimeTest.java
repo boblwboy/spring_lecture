@@ -17,26 +17,33 @@ public class LocalDateTimeTest {
 
         System.out.println("====================使用LocalDateTime=========================");
 
+        //2014-03-18 13:45:20
         LocalDateTime dt1 = LocalDateTime.of(2014, Month.MARCH, 18, 13, 45, 20);
         System.out.println(dt1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
+        //2014-03-18 13:45:20
         LocalDateTime dt2 = LocalDateTime.of(LocalDate.parse("2014-03-18"), LocalTime.parse("13:45:20"));
         System.out.println(dt2.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
+        //2014-03-18 13:45:20
         LocalDate date = LocalDate.parse("2014-03-18");
         LocalDateTime dt3 = date.atTime(LocalTime.parse("13:45:20"));
         System.out.println(dt3.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
+        //2014-03-18 13:45:20
         LocalDateTime dt4 = date.atTime(13, 45, 20);
         System.out.println(dt4.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
+        //2014-03-18 13:45:20
         LocalTime time = LocalTime.of(13, 45, 20);
         LocalDateTime dt5 = time.atDate(date);
         System.out.println(dt5.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
+        //2019-12-04 14:56:30
         LocalDateTime dateTime = LocalDateTime.parse("2019-12-04 14:56:30",DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         System.out.println(dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
+        //提取LocalDate或者LocalTime组件：
         LocalDate date1 = dt1.toLocalDate();
         LocalTime time1 = dt1.toLocalTime();
 

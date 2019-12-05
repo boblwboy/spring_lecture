@@ -22,6 +22,7 @@ public class ManipulateDateTest {
         System.out.println("====================操纵、解析、格式化日期=========================");
         //2014-03-18
         LocalDate date1 = LocalDate.of(2014, 3, 18);
+        //以比 较 直观 的 方式 操纵 LocalDate 的 属性
         //2011-03-18
         LocalDate date2 = date1.withYear(2011);
         //2011-03-25

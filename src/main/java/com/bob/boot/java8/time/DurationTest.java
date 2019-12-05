@@ -23,14 +23,17 @@ public class DurationTest {
         LocalTime time1 = LocalTime.parse("11:27:01");
         LocalTime time2 = LocalTime.parse("11:27:02");
 
+        //1
         Duration d1 = Duration.between(time1, time2);
         System.out.println(d1.getSeconds());
 
+        //-86400
         LocalDateTime dateTime1 = LocalDateTime.parse("2019-12-05 13:37:04", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         LocalDateTime dateTime2 = LocalDateTime.parse("2019-12-04 13:37:04", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         Duration d2 = Duration.between(dateTime1,dateTime2);
         System.out.println(d2.getSeconds());
 
+        //1
         Period period = Period.between(LocalDate.of(2019, 12, 5), LocalDate.of(2020, 1, 25));
         System.out.println(period.getMonths());
 
