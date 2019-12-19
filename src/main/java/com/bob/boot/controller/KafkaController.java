@@ -18,7 +18,7 @@ import java.util.Date;
  * @author boblw
  * @title: KafkaController
  * @projectName spring_lecture
- * @description: TODO
+ * @description: kafka
  * @date 2019/12/19 09:30
  */
 @RestController
