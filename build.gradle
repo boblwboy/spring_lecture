@@ -43,6 +43,8 @@ dependencies {
             'org.springframework.boot:spring-boot-loader',
             'org.springframework.boot:spring-boot-starter-test',
             'org.springframework.boot:spring-boot-devtools',
-            'cn.hutool:hutool-all:4.6.8'
+            'cn.hutool:hutool-all:4.6.8',
+            'org.springframework.kafka:spring-kafka',
+            'com.google.code.gson:gson'
     )
 }
