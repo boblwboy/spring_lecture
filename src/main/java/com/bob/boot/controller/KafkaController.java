@@ -10,10 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 
@@ -46,6 +43,17 @@ public class KafkaController {
         kafkaMessage.setPassword(password);
         kafkaMessage.setDate(new Date());
 
+        this.kafkaProducer.sendKafkaMessage(kafkaMessage);
+
+        return kafkaMessage;
+    }
+
+    @RequestMapping(value = "/message2", method = RequestMethod.POST)
+    public KafkaMessage sendKafkaMessage2(@RequestBody KafkaMessage kafkaMessage) {
+
+        LOGGER.info("sendKafkaMessage2 invoked");
+
+        kafkaMessage.setDate(new Date());
         this.kafkaProducer.sendKafkaMessage(kafkaMessage);
 
         return kafkaMessage;
