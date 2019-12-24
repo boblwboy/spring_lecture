@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @description: TODO
  * @date 2019/12/19 9:13
  */
-@Component
+//@Component
 public class KafkaConsumer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @description: TODO
  * @date 2019/12/19 8:42
  */
-@Component
+//@Component
 public class KafkaProducer {
 
     @Autowired

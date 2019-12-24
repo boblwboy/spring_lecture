@@ -21,7 +21,7 @@ import java.util.Date;
  * @description: kafka
  * @date 2019/12/19 09:30
  */
-@RestController
+//@RestController
 @RequestMapping(value = "/kafka", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class KafkaController {
 
